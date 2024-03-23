@@ -1,3 +1,7 @@
+**/*.data
+dataSampleVideos/**/*
+.DS_Store
+
 # Logs
 logs
 *.log
@@ -128,3 +132,5 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+yarn.lock

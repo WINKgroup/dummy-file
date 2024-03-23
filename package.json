@@ -1,0 +1,47 @@
+{
+  "name": "@winkgroup/dummy-file",
+  "version": "0.0.0",
+  "description": "tools to create dummy files useful for testing",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "build": "npm run clean && tsc",
+    "format": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
+    "prepare": "npm run build",
+    "test": "yarn jest",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WINKgroup/dummy-file.git"
+  },
+  "keywords": [
+    "dummy",
+    "file",
+    "fake",
+    "test"
+  ],
+  "author": "winksrl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WINKgroup/dummy-file/issues"
+  },
+  "homepage": "https://github.com/WINKgroup/dummy-file#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/lodash": "^4.17.0",
+    "@types/node": "^20.11.30",
+    "jest": "^29.7.0",
+    "prettier": "3.2.5",
+    "ts-jest": "^29.1.2",
+    "ts-node": "*10.9.2",
+    "typescript": "5.4.3"
+  }
+}
